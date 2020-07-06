@@ -1,0 +1,62 @@
+
+
+################  OLD VERSION ###################################
+
+COPY source/star.hmc.co.kr.crt /usr/local/share/ca-certificates/
+COPY source/hae-hpc.com.crt /usr/local/share/ca-certificates/
+COPY source/star.hmc.co.kr.setigo.crt /usr/local/share/ca-certificates/
+
+#COPY source/python-keystoneclient-3.17.0.tgz /python-keystoneclient-3.17.0.tgz
+#COPY source/python-swiftclient-3.6.0.tgz /python-swiftclient-3.6.0.tgz
+
+RUN rm -f /etc/apt/sources.list.d/*
+
+RUN echo "Acquire::https::Verify-Peer \"false\";"        > /etc/apt/apt.conf.d/80-ssl-exceptions && \
+    echo "Acquire::https::Verify-Host \"false\";"       >> /etc/apt/apt.conf.d/80-ssl-exceptions && \
+    echo "deb http://nexus.hae-hpc.com/repository/xenial-proxy/ xenial main restricted multiverse universe"                               > /etc/apt/sources.list && \
+    echo "deb http://nexus.hae-hpc.com/repository/xenial-proxy/ xenial-updates main restricted multiverse universe"                       >> /etc/apt/sources.list && \
+    echo "deb http://nexus.hae-hpc.com/repository/xenial-proxy/ xenial-security main restricted multiverse universe"                                      >> /etc/apt/sources.list && \
+    echo "deb http://nexus.hae-hpc.com/repository/xenial-proxy/ xenial-backports main restricted multiverse universe"                              >> /etc/apt/sources.list && \
+    echo "[global]"                                                  > /etc/pip.conf && \
+   #echo "trusted-host = devpi.hae-hpc.com"                         >> /etc/pip.conf && \
+   echo "trusted-host = nexus.hmc.co.kr"                           >> /etc/pip.conf && \
+   echo "timeout = 6000"					   >> /etc/pip.conf && \ 
+    echo ""                                                         >> /etc/pip.conf && \
+    echo "[install]"                                                >> /etc/pip.conf && \
+   # echo "index-url = https://devpi.hae-hpc.com/root/pypi/+simple/" >> /etc/pip.conf && \
+    echo "index-url = https://nexus.hmc.co.kr/repository/pypi-proxy/simple/" >> /etc/pip.conf && \
+   #echo "index-url = https://pypi.hmc.co.kr/root/pypi/+simple/" >> /etc/pip.conf && \
+    echo ""                                                         >> /etc/pip.conf && \
+    echo "[search]"                                                 >> /etc/pip.conf && \
+   # echo "index-url = https://devpi.hae-hpc.com/root/pypi"         >> /etc/pip.conf
+    echo "index-url = https://nexus.hmc.co.kr/repository/pypi-proxy/pypi"         >> /etc/pip.conf
+   # echo "index-url = https://pypi.hmc.co.kr/root/pypi"         >> /etc/pip.conf
+
+RUN apt-get update 
+RUN apt-get -y install apt-utils ca-certificates
+RUN update-ca-certificates
+RUN apt-get update 
+
+#############################################################
+
+ENV DEBIAN_FRONTEND=noninteractive
+RUN apt-get -yq install libnss-ldap libpam-ldap ldap-utils nscd openssh-server
+
+RUN echo "session required        pam_mkhomedir.so skel=/etc/skel umask=007" >> /etc/pam.d/common-session
+
+RUN sed -i "s/^passwd:.*/passwd: compat ldap/g" /etc/nsswitch.conf
+RUN sed -i "s/^group:.*/group: compat ldap/g" /etc/nsswitch.conf
+RUN sed -i "s/^shadow:.*/shadow: compat ldap/g" /etc/nsswitch.conf
+
+RUN echo "base dc=hpc,dc=com" > /etc/ldap.conf
+
+RUN echo "uri ldap://ldap.hmc.co.kr:30389" >> /etc/ldap.conf
+RUN echo "ldap_version 3" >> /etc/ldap.conf
+RUN echo "binddn cn=Manager,dc=hpc,dc=com" >> /etc/ldap.conf
+RUN echo "bindpw secret" >> /etc/ldap.conf
+RUN echo "pam_password md5" >> /etc/ldap.conf
+
+RUN mkdir -p /var/run/sshd
+
+
+

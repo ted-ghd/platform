@@ -1,0 +1,33 @@
+FROM docker.hmc.co.kr/autoever/hpc/ubuntu:xenial
+
+
+COPY source/star.hmc.co.kr.crt /usr/local/share/ca-certificates/
+
+RUN rm -f /etc/apt/sources.list.d/*
+
+RUN echo "Acquire::https::Verify-Peer \"false\";"        > /etc/apt/apt.conf.d/80-ssl-exceptions && \
+    echo "Acquire::https::Verify-Host \"false\";"       >> /etc/apt/apt.conf.d/80-ssl-exceptions && \
+    echo "deb http://ubuntu.hmc.co.kr xenial main restricted"                                > /etc/apt/sources.list && \
+    echo "deb http://ubuntu.hmc.co.kr xenial-updates main restricted"                       >> /etc/apt/sources.list && \
+    echo "deb http://ubuntu.hmc.co.kr xenial universe"                                      >> /etc/apt/sources.list && \
+    echo "deb http://ubuntu.hmc.co.kr xenial-updates universe"                              >> /etc/apt/sources.list && \
+    echo "deb http://ubuntu.hmc.co.kr xenial multiverse"                                    >> /etc/apt/sources.list && \
+    echo "deb http://ubuntu.hmc.co.kr xenial-updates multiverse"                            >> /etc/apt/sources.list && \
+    echo "deb http://ubuntu.hmc.co.kr xenial-backports main restricted universe multiverse" >> /etc/apt/sources.list && \
+    echo "deb http://ubuntu.hmc.co.kr xenial-security main restricted"                      >> /etc/apt/sources.list && \
+    echo "deb http://ubuntu.hmc.co.kr xenial-security universe"                             >> /etc/apt/sources.list && \
+    echo "deb http://ubuntu.hmc.co.kr xenial-security multiverse"                           >> /etc/apt/sources.list && \
+    echo "[global]"                                                  > /etc/pip.conf && \
+   echo "trusted-host = pypi.hmc.co.kr"                         >> /etc/pip.conf && \
+    echo ""                                                         >> /etc/pip.conf && \
+    echo "[install]"                                                >> /etc/pip.conf && \
+    echo "index-url = https://pypi.hmc.co.kr/+simple/" >> /etc/pip.conf && \
+    echo ""                                                         >> /etc/pip.conf && \
+    echo "[search]"                                                 >> /etc/pip.conf && \
+    echo "index-url = https://pypi.hmc.co.kr/"         >> /etc/pip.conf
+
+RUN apt-get update
+RUN apt-get -y install apt-utils ca-certificates
+RUN update-ca-certificates
+RUN apt-get update
+

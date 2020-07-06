@@ -1,0 +1,24 @@
+stages:
+
+- build
+- deploy
+
+lets_build:
+  stage: build
+  script:  
+  - pwd
+  - python /workdir/build/Dockerfile.py
+  - chmod +x /temp/build/docker_build_script
+  - sh /temp/build/docker_build_script
+  tags:
+  - #TEAMID#-ide
+
+lets_deploy:
+  stage: deploy
+  script:
+  - pwd
+  - python /workdir/deploy/k8s.py
+  - chmod +x /temp/deploy/k8s_deploy_script
+  - sh /temp/deploy/k8s_deploy_script
+  tags:
+  - #TEAMID#-ide

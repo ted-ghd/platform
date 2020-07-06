@@ -1,0 +1,4 @@
+- name: "http-#CON_PORT#"
+      port: #CON_PORT#
+      targetPort: #CON_PORT#
+    

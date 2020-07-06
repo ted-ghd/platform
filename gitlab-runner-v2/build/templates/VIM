@@ -1,0 +1,4 @@
+########### VIM SETTING TEMPLATE ##################
+
+RUN apt-get -y install vim && \
+    echo "export TERM=linux" >> /etc/profile

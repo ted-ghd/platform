@@ -1,0 +1,7 @@
+apiVersion: storage.k8s.io/v1
+kind: StorageClass
+metadata:
+  name: rnd-autoever
+provisioner: netapp.io/trident
+parameters:
+  storagePools: "vs_ndlnas_01_10.14.158.32:aggr_node01_data,aggr_node02_data"

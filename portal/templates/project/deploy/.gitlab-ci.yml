@@ -1,0 +1,16 @@
+stages:
+- deploy
+
+lets_deploy:
+  stage: deploy
+  script:
+  - pwd
+  - python /workdir/deploy/selectFolder.py
+  - chmod +x /temp/deploy/folder_copy_script
+  - sh /temp/deploy/folder_copy_script
+  - python /workdir/deploy/k8s2.py
+  - chmod +x /temp/deploy/k8s_deploy_script
+  - sh /temp/deploy/k8s_deploy_script
+  tags:
+  - #TEAMID#-deploy
+

@@ -1,0 +1,8 @@
+BASE="docker.hmc.co.krshared/registry/nvidia/caffe2/18.02-py3"
+CUSTOM="FALSE"
+ENABLE_CD="FALSE"
+IMAGE_PATH="shared/registry/nvidia/caffe2"
+IMAGE_TAG="18.02-py3"
+MAINTAINER="kim.taeseong@hyundai-autoever.com"
+SUB_PRJ="webportal"
+TAG="test"

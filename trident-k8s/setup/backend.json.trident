@@ -1,0 +1,15 @@
+{
+    "version": 1,
+    "backendName": "vs_ndlnas_01_10.14.158.32",
+    "storageDriverName": "ontap-nas",
+    "managementLIF": "10.14.158.32",
+    "dataLIF": "10.14.13.43",
+    "svm": "vs_ndlnas_01",
+    "username": "admin",
+    "password": "NetApr!1",
+    "defaults": {
+        "spaceReserve": "none",
+        "snapshotDir": "false"
+        }
+}
+

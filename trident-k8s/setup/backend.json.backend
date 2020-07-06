@@ -1,0 +1,12 @@
+{
+    "version": 1,
+    "backendName": "ssd-vs_AD",
+    "storageDriverName": "ontap-nas-economy",
+    "managementLIF": "10.12.54.37",
+    "dataLIF": "10.12.54.38",
+    "svm": "vs_AD",
+    "username": "admin",
+    "password": "NetApr!1",
+    "aggregate": "aggr_node01_data"
+}
+

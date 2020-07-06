@@ -1,0 +1,13 @@
+stages:
+
+- build
+
+lets_build:
+  stage: build
+  script:  
+  - pwd
+  - cp -rf /workdir/source/* $(pwd)/source/
+  - chmod +x docker_build_script
+  - sh docker_build_script
+  tags:
+  - #TEAMID#-build

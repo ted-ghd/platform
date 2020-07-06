@@ -1,0 +1,4 @@
+      - name: #VOL_NAME#
+        hostPath:
+          path: #HOST_PATH#
+          type: ""

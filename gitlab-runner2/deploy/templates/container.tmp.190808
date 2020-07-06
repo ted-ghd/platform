@@ -1,0 +1,17 @@
+      - name: #CON_NAME#
+        image: #IMAGE#
+        ports:
+        - containerPort: #CON_PORT#
+          hostPort: #EXP_PORT#
+#EXTRA_PORT#
+        imagePullPolicy: Always
+        volumeMounts:
+#CON_VOLUME#
+        env:
+#CON_ENVS#
+        args:
+        #CON_ARGS#
+        command:
+        #CON_CMD#
+        resources:
+#GPU#

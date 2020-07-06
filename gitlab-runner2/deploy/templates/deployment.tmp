@@ -1,0 +1,47 @@
+apiVersion: extensions/v1beta1
+kind: Deployment
+metadata:
+  name: #POD_NAME#-deployment
+  namespace: #NAMESPACE#
+  labels:
+    app: #POD_LABEL#
+spec:
+  replicas: 1 
+  selector:
+    matchLabels:
+      app: #POD_LABEL#
+  template:
+    metadata:
+      labels:
+        app: #POD_LABEL#
+    spec:
+      containers:
+#CONTAINER#
+      hostAliases:
+      - hostnames:
+        - nexus.hae-hpc.com
+        ip: 10.12.60.5
+      - hostnames:
+        - nexus.hmc.co.kr
+        ip: 10.12.60.5
+      - hostnames:
+        - repo.hmc.co.kr
+        ip: 10.12.60.5
+      - hostnames:
+        - ldap.hmc.co.kr
+        ip: 10.12.60.5
+      - hostnames:
+        - gitlab.hmc.co.kr
+        ip: 10.12.60.5
+      - hostnames:
+        - docker.hmc.co.kr
+        ip: 10.12.60.5
+      - hostnames:
+        - github.hmckmc.co.kr
+        ip: 10.7.18.30
+      imagePullSecrets:
+      - name: #IMG_SCRT#
+      nodeSelector:        
+        group: #GROUP#
+      volumes:
+#VOLUME#

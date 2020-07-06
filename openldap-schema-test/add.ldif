@@ -1,0 +1,505 @@
+# People, hpc.com
+dn: ou=People,dc=hpc,dc=com
+objectClass: organizationalUnit
+ou: People
+
+# Groups, hpc.com
+dn: ou=Groups,dc=hpc,dc=com
+objectClass: organizationalUnit
+ou: Groups
+
+
+dn: cn=A7253,ou=Groups,dc=hpc,dc=com
+objectClass: posixGroup
+cn: hpcs
+gidNumber: 5000
+
+
+dn: cn=1HB5,ou=Groups,dc=hpc,dc=com
+objectClass: posixGroup
+cn: hpcs
+gidNumber: 7000
+
+
+dn: cn=THLN,ou=Groups,dc=hpc,dc=com
+objectClass: posixGroup
+cn: hpcs
+gidNumber: 5001
+
+
+dn: cn=THLW,ou=Groups,dc=hpc,dc=com
+objectClass: posixGroup
+cn: hpcs
+gidNumber: 5002
+
+
+dn: cn=THLZ,ou=Groups,dc=hpc,dc=com
+objectClass: posixGroup
+cn: hpcs
+gidNumber: 5003
+
+
+dn: cn=AGD2,ou=Groups,dc=hpc,dc=com
+objectClass: posixGroup
+cn: hpcs
+gidNumber: 5004
+
+
+dn: uid=6645502,ou=People,dc=hpc,dc=com
+objectClass: inetOrgPerson
+objectClass: posixAccount
+objectClass: shadowAccount
+uid: 6645502
+sn: 6645502
+givenName: 6645502
+cn: 6645502
+displayName: 6645502
+uidNumber: 170001
+gidNumber: 7000
+userPassword: {SASL}6645502@hkmc.hkmg.global
+gecos: 6645502
+loginShell: /bin/bash
+homeDirectory: /home/6645502
+
+
+dn: uid=6645763,ou=People,dc=hpc,dc=com
+objectClass: inetOrgPerson
+objectClass: posixAccount
+objectClass: shadowAccount
+uid: 6645763
+sn: 6645763
+givenName: 6645763
+cn: 6645763
+displayName: 6645763
+uidNumber: 170002
+gidNumber: 7000
+userPassword: {SASL}6645763@hkmc.hkmg.global
+gecos: 6645763
+loginShell: /bin/bash
+homeDirectory: /home/6645763
+
+
+dn: uid=E530756,ou=People,dc=hpc,dc=com
+objectClass: inetOrgPerson
+objectClass: posixAccount
+objectClass: shadowAccount
+uid: E530756
+sn: E530756
+givenName: E530756
+cn: E530756
+displayName: E530756
+uidNumber: 150001
+gidNumber: 5000
+userPassword: {SASL}E530756@hkmc.hkmg.global
+gecos: E530756
+loginShell: /bin/bash
+homeDirectory: /home/E530756
+
+
+dn: uid=E560098,ou=People,dc=hpc,dc=com
+objectClass: inetOrgPerson
+objectClass: posixAccount
+objectClass: shadowAccount
+uid: E560098
+sn: E560098
+givenName: E560098
+cn: E560098
+displayName: E560098
+uidNumber: 150002
+gidNumber: 5000
+userPassword: {SASL}E560098@hkmc.hkmg.global
+gecos: E560098
+loginShell: /bin/bash
+homeDirectory: /home/E560098
+
+
+dn: uid=E640025,ou=People,dc=hpc,dc=com
+objectClass: inetOrgPerson
+objectClass: posixAccount
+objectClass: shadowAccount
+uid: E640025
+sn: E640025
+givenName: E640025
+cn: E640025
+displayName: E640025
+uidNumber: 150003
+gidNumber: 5000
+userPassword: {SASL}E640025@hkmc.hkmg.global
+gecos: E640025
+loginShell: /bin/bash
+homeDirectory: /home/E640025
+
+
+dn: uid=6517173,ou=People,dc=hpc,dc=com
+objectClass: inetOrgPerson
+objectClass: posixAccount
+objectClass: shadowAccount
+uid: 6517173
+sn: 6517173
+givenName: 6517173
+cn: 6517173
+displayName: 6517173
+uidNumber: 150041
+gidNumber: 5004
+userPassword: {SASL}6517173@hkmc.hkmg.global
+gecos: 6517173
+loginShell: /bin/bash
+homeDirectory: /home/6517173
+
+
+dn: uid=6306431,ou=People,dc=hpc,dc=com
+objectClass: inetOrgPerson
+objectClass: posixAccount
+objectClass: shadowAccount
+uid: 6306431
+sn: 6306431
+givenName: 6306431
+cn: 6306431
+displayName: 6306431
+uidNumber: 150042
+gidNumber: 5004
+userPassword: {SASL}6306431@hkmc.hkmg.global
+gecos: 6306431
+loginShell: /bin/bash
+homeDirectory: /home/6306431
+
+
+dn: uid=6802978,ou=People,dc=hpc,dc=com
+objectClass: inetOrgPerson
+objectClass: posixAccount
+objectClass: shadowAccount
+uid: 6802978
+sn: 6802978
+givenName: 6802978
+cn: 6802978
+displayName: 6802978
+uidNumber: 150043
+gidNumber: 5004
+userPassword: {SASL}6802978@hkmc.hkmg.global
+gecos: 6802978
+loginShell: /bin/bash
+homeDirectory: /home/6802978
+
+
+dn: uid=6402108,ou=People,dc=hpc,dc=com
+objectClass: inetOrgPerson
+objectClass: posixAccount
+objectClass: shadowAccount
+uid: 6402108
+sn: 6402108
+givenName: 6402108
+cn: 6402108
+displayName: 6402108
+uidNumber: 150044
+gidNumber: 5004
+userPassword: {SASL}6402108@hkmc.hkmg.global
+gecos: 6402108
+loginShell: /bin/bash
+homeDirectory: /home/6402108
+
+
+dn: uid=6506561,ou=People,dc=hpc,dc=com
+objectClass: inetOrgPerson
+objectClass: posixAccount
+objectClass: shadowAccount
+uid: 6506561
+sn: 6506561
+givenName: 6506561
+cn: 6506561
+displayName: 6506561
+uidNumber: 150045
+gidNumber: 5004
+userPassword: {SASL}6506561@hkmc.hkmg.global
+gecos: 6506561
+loginShell: /bin/bash
+homeDirectory: /home/6506561
+
+
+dn: uid=6608927,ou=People,dc=hpc,dc=com
+objectClass: inetOrgPerson
+objectClass: posixAccount
+objectClass: shadowAccount
+uid: 6608927
+sn: 6608927
+givenName: 6608927
+cn: 6608927
+displayName: 6608927
+uidNumber: 150046
+gidNumber: 5004
+userPassword: {SASL}6608927@hkmc.hkmg.global
+gecos: 6608927
+loginShell: /bin/bash
+homeDirectory: /home/6608927
+
+
+dn: uid=6829745,ou=People,dc=hpc,dc=com
+objectClass: inetOrgPerson
+objectClass: posixAccount
+objectClass: shadowAccount
+uid: 6829745
+sn: 6829745
+givenName: 6829745
+cn: 6829745
+displayName: 6829745
+uidNumber: 150047
+gidNumber: 5004
+userPassword: {SASL}6829745@hkmc.hkmg.global
+gecos: 6829745
+loginShell: /bin/bash
+homeDirectory: /home/6829745
+
+
+dn: uid=6418495,ou=People,dc=hpc,dc=com
+objectClass: inetOrgPerson
+objectClass: posixAccount
+objectClass: shadowAccount
+uid: 6418495
+sn: 6418495
+givenName: 6418495
+cn: 6418495
+displayName: 6418495
+uidNumber: 150011
+gidNumber: 5001
+userPassword: {SASL}6418495@hkmc.hkmg.global
+gecos: 6418495
+loginShell: /bin/bash
+homeDirectory: /home/6418495
+
+
+dn: uid=5901588,ou=People,dc=hpc,dc=com
+objectClass: inetOrgPerson
+objectClass: posixAccount
+objectClass: shadowAccount
+uid: 5901588
+sn: 5901588
+givenName: 5901588
+cn: 5901588
+displayName: 5901588
+uidNumber: 150012
+gidNumber: 5001
+userPassword: {SASL}5901588@hkmc.hkmg.global
+gecos: 5901588
+loginShell: /bin/bash
+homeDirectory: /home/5901588
+
+
+dn: uid=6530988,ou=People,dc=hpc,dc=com
+objectClass: inetOrgPerson
+objectClass: posixAccount
+objectClass: shadowAccount
+uid: 6530988
+sn: 6530988
+givenName: 6530988
+cn: 6530988
+displayName: 6530988
+uidNumber: 150013
+gidNumber: 5001
+userPassword: {SASL}6530988@hkmc.hkmg.global
+gecos: 6530988
+loginShell: /bin/bash
+homeDirectory: /home/6530988
+
+
+dn: uid=6008746,ou=People,dc=hpc,dc=com
+objectClass: inetOrgPerson
+objectClass: posixAccount
+objectClass: shadowAccount
+uid: 6008746
+sn: 6008746
+givenName: 6008746
+cn: 6008746
+displayName: 6008746
+uidNumber: 150014
+gidNumber: 5001
+userPassword: {SASL}6008746@hkmc.hkmg.global
+gecos: 6008746
+loginShell: /bin/bash
+homeDirectory: /home/6008746
+
+
+dn: uid=6401833,ou=People,dc=hpc,dc=com
+objectClass: inetOrgPerson
+objectClass: posixAccount
+objectClass: shadowAccount
+uid: 6401833
+sn: 6401833
+givenName: 6401833
+cn: 6401833
+displayName: 6401833
+uidNumber: 150015
+gidNumber: 5001
+userPassword: {SASL}6401833@hkmc.hkmg.global
+gecos: 6401833
+loginShell: /bin/bash
+homeDirectory: /home/6401833
+
+
+dn: uid=6443314,ou=People,dc=hpc,dc=com
+objectClass: inetOrgPerson
+objectClass: posixAccount
+objectClass: shadowAccount
+uid: 6443314
+sn: 6443314
+givenName: 6443314
+cn: 6443314
+displayName: 6443314
+uidNumber: 150016
+gidNumber: 5001
+userPassword: {SASL}6443314@hkmc.hkmg.global
+gecos: 6443314
+loginShell: /bin/bash
+homeDirectory: /home/6443314
+
+
+dn: uid=6506554,ou=People,dc=hpc,dc=com
+objectClass: inetOrgPerson
+objectClass: posixAccount
+objectClass: shadowAccount
+uid: 6506554
+sn: 6506554
+givenName: 6506554
+cn: 6506554
+displayName: 6506554
+uidNumber: 150017
+gidNumber: 5001
+userPassword: {SASL}6506554@hkmc.hkmg.global
+gecos: 6506554
+loginShell: /bin/bash
+homeDirectory: /home/6506554
+
+
+dn: uid=5902688,ou=People,dc=hpc,dc=com
+objectClass: inetOrgPerson
+objectClass: posixAccount
+objectClass: shadowAccount
+uid: 5902688
+sn: 5902688
+givenName: 5902688
+cn: 5902688
+displayName: 5902688
+uidNumber: 150021
+gidNumber: 5002
+userPassword: {SASL}5902688@hkmc.hkmg.global
+gecos: 5902688
+loginShell: /bin/bash
+homeDirectory: /home/5902688
+
+
+dn: uid=6102557,ou=People,dc=hpc,dc=com
+objectClass: inetOrgPerson
+objectClass: posixAccount
+objectClass: shadowAccount
+uid: 6102557
+sn: 6102557
+givenName: 6102557
+cn: 6102557
+displayName: 6102557
+uidNumber: 150022
+gidNumber: 5002
+userPassword: {SASL}6102557@hkmc.hkmg.global
+gecos: 6102557
+loginShell: /bin/bash
+homeDirectory: /home/6102557
+
+
+dn: uid=5418724,ou=People,dc=hpc,dc=com
+objectClass: inetOrgPerson
+objectClass: posixAccount
+objectClass: shadowAccount
+uid: 5418724
+sn: 5418724
+givenName: 5418724
+cn: 5418724
+displayName: 5418724
+uidNumber: 150023
+gidNumber: 5002
+userPassword: {SASL}5418724@hkmc.hkmg.global
+gecos: 5418724
+loginShell: /bin/bash
+homeDirectory: /home/5418724
+
+
+dn: uid=6533485,ou=People,dc=hpc,dc=com
+objectClass: inetOrgPerson
+objectClass: posixAccount
+objectClass: shadowAccount
+uid: 6533485
+sn: 6533485
+givenName: 6533485
+cn: 6533485
+displayName: 6533485
+uidNumber: 150024
+gidNumber: 5002
+userPassword: {SASL}6533485@hkmc.hkmg.global
+gecos: 6533485
+loginShell: /bin/bash
+homeDirectory: /home/6533485
+
+
+dn: uid=6803125,ou=People,dc=hpc,dc=com
+objectClass: inetOrgPerson
+objectClass: posixAccount
+objectClass: shadowAccount
+uid: 6803125
+sn: 6803125
+givenName: 6803125
+cn: 6803125
+displayName: 6803125
+uidNumber: 150025
+gidNumber: 5002
+userPassword: {SASL}6803125@hkmc.hkmg.global
+gecos: 6803125
+loginShell: /bin/bash
+homeDirectory: /home/6803125
+
+
+dn: uid=6110716,ou=People,dc=hpc,dc=com
+objectClass: inetOrgPerson
+objectClass: posixAccount
+objectClass: shadowAccount
+uid: 6110716
+sn: 6110716
+givenName: 6110716
+cn: 6110716
+displayName: 6110716
+uidNumber: 150031
+gidNumber: 5003
+userPassword: {SASL}6110716@hkmc.hkmg.global
+gecos: 6110716
+loginShell: /bin/bash
+homeDirectory: /home/6110716
+
+
+dn: uid=6002094,ou=People,dc=hpc,dc=com
+objectClass: inetOrgPerson
+objectClass: posixAccount
+objectClass: shadowAccount
+uid: 6002094
+sn: 6002094
+givenName: 6002094
+cn: 6002094
+displayName: 6002094
+uidNumber: 150032
+gidNumber: 5003
+userPassword: {SASL}6002094@hkmc.hkmg.global
+gecos: 6002094
+loginShell: /bin/bash
+homeDirectory: /home/6002094
+
+
+dn: uid=6803676,ou=People,dc=hpc,dc=com
+objectClass: inetOrgPerson
+objectClass: posixAccount
+objectClass: shadowAccount
+uid: 6803676
+sn: 6803676
+givenName: 6803676
+cn: 6803676
+displayName: 6803676
+uidNumber: 150033
+gidNumber: 5003
+userPassword: {SASL}6803676@hkmc.hkmg.global
+gecos: 6803676
+loginShell: /bin/bash
+homeDirectory: /home/6803676
+

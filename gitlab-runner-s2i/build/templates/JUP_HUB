@@ -1,0 +1,40 @@
+################# JUPYTER HUB SETTING TEMPLATE ###############
+
+RUN npm config set registry "https://nexus.hmc.co.kr/repository/npm-proxy/"
+RUN npm config set strict-ssl false
+RUN npm install -g configurable-http-proxy
+RUN npm install -g yarn
+RUN yarn config set "strict-ssl" false
+RUN yarn config set registry https://nexus.hmc.co.kr/repository/npm-proxy/
+RUN pip install jupyter jupyterlab jupyterhub
+
+######################## JUPYTER HUB EXTENSTION ###################
+
+RUN jupyter labextension install @jupyterlab/hub-extension
+RUN jupyter lab build
+
+########################## monaco extension ###########################
+#WORKDIR /
+#RUN git clone https://gitlab.hae-hpc.com/autoever/jupyterlab-monaco.git
+
+#WORKDIR /jupyterlab-monaco
+
+#RUN rm -rf /jupyterlab-monaco/yarn.lock
+#RUN yarn install
+#RUN yarn run build
+
+
+#RUN jupyter labextension link .
+
+########################################################################
+
+RUN mkdir -p /etc/jupyterhub
+RUN echo "c.JupyterHub.authenticator_class = 'ldapauthenticator.LDAPAuthenticator'" > /etc/jupyterhub/jupyterhub_config.py && \
+    echo "c.Spawner.cmd = ['jupyter-labhub']" >> /etc/jupyterhub/jupyterhub_config.py && \
+    echo "c.LDAPAuthenticator.server_address = 'ldap.hmc.co.kr'" >> /etc/jupyterhub/jupyterhub_config.py && \
+    echo "c.LDAPAuthenticator.server_port = 30389" >> /etc/jupyterhub/jupyterhub_config.py && \
+    echo "c.LDAPAuthenticator.valid_username_regex = '^[0-9A-Za-z][.a-z0-9_-]*$'" >> /etc/jupyterhub/jupyterhub_config.py && \
+    echo "c.LDAPAuthenticator.bind_dn_template = ['uid={username},ou=People,dc=hpc,dc=com']"             >> /etc/jupyterhub/jupyterhub_config.py
+
+RUN chmod 777 /home
+

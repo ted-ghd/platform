@@ -1,0 +1,11 @@
+      - name: #CON_NAME#
+        image: #IMAGE#
+        imagePullPolicy: Always
+        volumeMounts:
+#CON_VOLUME#
+        args:
+        #CON_ARGS#
+        command:
+        #CON_CMD#
+        resources:
+#GPU#

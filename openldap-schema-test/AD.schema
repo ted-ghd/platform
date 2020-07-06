@@ -1,0 +1,19 @@
+ attributetype ( 1.1.2.1.1 NAME 'objectSid'
+                DESC 'objectSid from AD'
+                EQUALITY caseIgnoreMatch
+                SUBSTR caseIgnoreSubstringsMatch
+                SYNTAX 1.3.6.1.4.1.1466.115.121.1.15
+                SINGLE-VALUE )
+
+
+ attributetype ( 1.1.2.1.2 NAME 'sAMAccountName'
+                DESC 'sAMAccountName from AD'
+                EQUALITY caseIgnoreMatch
+                SUBSTR caseIgnoreSubstringsMatch
+                SYNTAX 1.3.6.1.4.1.1466.115.121.1.15
+                SINGLE-VALUE )
+
+ objectclass ( 1.1.2.2.1 NAME 'hkmcADPersonObject'
+                DESC 'hkmc AD person'
+                AUXILIARY                
+                MAY ( objectSid $ sAMAccountName )  )

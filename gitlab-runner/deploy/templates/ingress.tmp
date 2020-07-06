@@ -1,0 +1,16 @@
+apiVersion: extensions/v1beta1
+kind: Ingress
+metadata:
+    name: #POD_NAME#-#CON_NAME#-ingress
+    namespace: #NAMESPACE#
+    annotations:
+      ingress.kubernetes.io/rewrite-target: /
+spec:
+    rules:
+    - host: xip.io
+      http:
+        paths:
+          - path: /
+            backend:
+              serviceName: #POD_NAME#-service
+              servicePort: #CON_PORT#

@@ -1,0 +1,2 @@
+NAMESPACEL		NAME		GPU					GPU
+metadata.namespace	metadata.name	spec.containers[*].resources.limits.*	spec.containers[*].resources.limits.nvidia.com/gpu

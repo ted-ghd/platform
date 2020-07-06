@@ -1,0 +1,19 @@
+
+WORKDIR /
+
+COPY source/python-keystoneclient-3.17.0.tgz /python-keystoneclient-3.17.0.tgz
+COPY source/python-swiftclient-3.6.0.tgz /python-swiftclient-3.6.0.tgz
+
+RUN apt-get -y install python-pip
+RUN tar xvfz /python-swiftclient-3.6.0.tgz
+RUN tar xvfz /python-keystoneclient-3.17.0.tgz
+
+RUN python -m pip install pip --upgrade
+RUN python -m pip install msgpack netifaces pbr
+
+WORKDIR /python-keystoneclient-3.17.0
+RUN python -m pip install python_keystoneclient-3.17.0-py2.py3-none-any.whl -f ./ --no-index
+
+WORKDIR /python-swiftclient-3.6.0
+RUN python -m pip install python_swiftclient-3.6.0-py2.py3-none-any.whl -f ./ --no-index
+

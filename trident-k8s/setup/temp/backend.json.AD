@@ -1,0 +1,15 @@
+{
+    "version": 1,
+    "backendName": "ssd-vs_AD_10.12.54.37",
+    "storageDriverName": "ontap-nas",
+    "managementLIF": "10.12.54.37",
+    "dataLIF": "10.12.54.38",
+    "svm": "vs_AD",
+    "username": "admin",
+    "password": "NetApr!1",
+    "defaults": {
+        "spaceReserve": "none",
+        "snapshotDir": "false"
+        }
+}
+

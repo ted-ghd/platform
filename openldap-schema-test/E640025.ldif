@@ -1,0 +1,17 @@
+# E640025, People, hpc.com
+dn: uid=E640025,ou=People,dc=hpc,dc=com
+objectClass: inetOrgPerson
+objectClass: posixAccount
+objectClass: shadowAccount
+uid: E640025
+sn: E640025
+givenName: E640025
+cn: E640025
+displayName: E640025
+uidNumber: 150003
+gidNumber: 5000
+userPassword: {SASL}E640025@hkmc.hkmg.global
+gecos: E640025
+loginShell: /bin/bash
+homeDirectory: /home/E640025
+

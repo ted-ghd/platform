@@ -1,0 +1,7 @@
+apiVersion: v1
+kind: ResourceQuota
+metadata:
+  name: sc-gpu-limit-adas2
+spec:
+  hard:
+    requests.nvidia.com/gpu: 16

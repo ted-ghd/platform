@@ -1,0 +1,6 @@
+CUSTOM="TRUE"
+ENABLE_CD="FALSE"
+BASE="docker.hmc.co.kr/hpc/ide/testtt:v0.1"
+MAINTAINER="kim.taeseong@hyundai-autoever.com"
+SUB_PRJ="job"
+TAG="190408101913"

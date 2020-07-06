@@ -1,0 +1,25 @@
+apiVersion: extensions/v1beta1
+kind: Deployment
+metadata:
+  name: #POD_NAME#-deployment
+  namespace: #NAMESPACE#
+  labels:
+    app: #POD_LABEL#
+spec:
+  replicas: 1 
+  selector:
+    matchLabels:
+      app: #POD_LABEL#
+  template:
+    metadata:
+      labels:
+        app: #POD_LABEL#
+    spec:
+      containers:
+#CONTAINER#
+      imagePullSecrets:
+      - name: #IMG_SCRT#
+      nodeSelector:        
+        group: #GROUP#
+      volumes:
+#VOLUME#

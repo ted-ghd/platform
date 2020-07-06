@@ -1,0 +1,4 @@
+      - emptyDir:
+          medium: Memory
+          sizeLimit: #SHM_SIZE#i
+        name: #SHM_NAME#

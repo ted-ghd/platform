@@ -1,0 +1,9 @@
+# CUDNN v7.1 -> v7.0
+#RUN curl -O http://developer.download.nvidia.com/compute/redist/cudnn/v7.0.5/cudnn-9.0-linux-x64-v7.tgz
+RUN curl -O http://www.hae-hpc.com/etc/src/cudnn-9.0-linux-x64-v7.tgz
+RUN tar -xzvf cudnn-9.0-linux-x64-v7.tgz
+RUN cp cuda/include/cudnn.h /usr/local/cuda/include
+RUN cp cuda/lib64/libcudnn* /usr/local/cuda/lib64
+RUN chmod a+r /usr/local/cuda/lib64/libcudnn*
+RUN echo "export PATH=/usr/local/cuda-9.0/bin${PATH:+:${PATH}}" >> ~/.bashrc
+RUN echo "export LD_LIBRARY_PATH=/usr/local/cuda-9.0/lib64" >> ~/.bashrc

@@ -1,0 +1,17 @@
+export { default as NewBuild } from './Build/NewBuild';
+export { default as Home } from './Home';
+export { default as Head } from './Common/Head';
+export { default as BuildList } from './Build/BuildList';
+export { default as Builds } from './Build/Builds';
+export { default as Deploys } from './Deploy/Deploys';
+export { default as DeployList } from './Deploy/DeployList';
+export { default as DepList } from './Deploy/DepList';
+export { default as IngressList } from './Deploy/IngressList';
+export { default as VolumeList } from './Deploy/VolumeList';
+export { default as ResourceList } from './Deploy/ResourceList';
+export { default as Integration } from './Integration/Integration';
+export { default as IntegInfo } from './Integration/IntegInfo';
+export { default as IntegEdit } from './Integration/IntegEdit';
+export { default as GitInfo } from './Integration/GitInfo';
+export { default as GitEdit } from './Integration/GitEdit';
+export { default as ImageList } from './Build/ImageList';

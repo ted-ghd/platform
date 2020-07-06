@@ -1,0 +1,22 @@
+apiVersion: batch/v1
+kind: Job
+metadata:
+  name: #POD_NAME#-job
+  namespace: #NAMESPACE#
+  labels:
+    job-name: #POD_LABEL#-job
+spec:
+  template:
+    metadata:
+      labels:
+        job-name: #POD_LABEL#-job
+    spec:
+      containers:
+#CONTAINER#
+      imagePullSecrets:
+      - name: #IMG_SCRT#
+      nodeSelector:        
+        group: #GROUP#
+      restartPolicy: Never
+      volumes:
+#VOLUME#

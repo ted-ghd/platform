@@ -1,0 +1,7 @@
+apiVersion: storage.k8s.io/v1
+kind: StorageClass
+metadata:
+  name: rnd-ad
+provisioner: netapp.io/trident
+parameters:
+  storagePools: "ssd-vs_AD_10.12.54.37:aggr_node01_data,aggr_node02_data"

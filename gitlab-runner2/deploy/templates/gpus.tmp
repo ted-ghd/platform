@@ -1,0 +1,4 @@
+          limits:
+            nvidia.com/gpu: #GPUS#
+          requests:
+            nvidia.com/gpu: #GPUS#

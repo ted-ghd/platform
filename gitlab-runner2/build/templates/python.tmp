@@ -1,0 +1,20 @@
+############# PYTHON 3.6.x or 3.7.x INSTALL TEMPLATE ######
+
+############# INSTALL DEPENDENCY ###############
+
+RUN apt-get install -y wget	build-essential	tk-dev	libncurses5-dev	libncursesw5-dev	libreadline6-dev	libdb5.3-dev	libgdbm-dev	libsqlite3-dev	libssl-dev	libbz2-dev	libexpat1-dev	liblzma-dev	zlib1g-dev	libreadline-dev	python-dev	python-setuptools	python-pip	python-smbus	libc6-dev	openssl	libffi-dev
+
+
+############# PREPARE SOURCE ###################
+RUN mkdir /home/Python
+WORKDIR /home/Python
+RUN wget http://www.hae-hpc.com/etc/src/Python-#PY_VER#.tgz
+RUN tar xvf Python-#PY_VER#.tgz
+############# BUILD INSTALL ####################
+WORKDIR /home/Python/Python-#PY_VER#
+RUN ./configure
+RUN make
+RUN make altinstall
+################################################
+
+#RUN make clean
